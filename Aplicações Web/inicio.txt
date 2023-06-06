@@ -1,0 +1,11 @@
+Uma aplicação que ira servir ao usuario fazer buscar de quais faculdades possuem na região que escolher, quais os cursos que ela
+disponibiliza e quais as carreiras ela pode seguir se formando nesse curso.
+
+Dados de faculdades (Nome, Local, Referencias)
+Dados de Cursos (Nome, Tempo, Custo do Curso, Carreiras)
+Psicologo ajudando
+parceria com as faculdades
+media de nota para bolsa
+Cadastro no Site
+Comunidade do site (para comentarios de cursos/faculdades)
+idade do publico-alvo
