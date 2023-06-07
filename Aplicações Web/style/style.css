@@ -5,6 +5,11 @@
 body {
   box-sizing: border-box;
 }
+
+main {
+  align-items: center;
+}
+
 .cabecalho {
   background-color: #41EEF9;
   padding: 2% 0% 2% 5%;
@@ -14,7 +19,7 @@ body {
 }
 
 .imagem_logo {
- width: 150px;
+ width: 100px;
 }
 
 .cabecalho_menu {
@@ -23,6 +28,11 @@ body {
   padding-block-end: 10px;
   gap: 10px;
   align-items: baseline;
+  text-align: justify;
+}
+
+a {
+  color: inherit;
 }
 
 .inscreva-se {
@@ -53,19 +63,36 @@ body {
   -o-border-radius: 100px;
 }
 
+
 .abaAtual {
+  display: flex;
+  flex-direction: row;
   padding-left: 5%;
   padding-top: 2%;
+  align-items: baseline;
+  text-align-last: auto;
+  gap: 10px;
 }
 .imagens-cursos{
   width: 100px;
 }
 
 .cursos-main{
-  align-items: center;
-  padding: 2% 25%;
+  font-size: 15px;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   background-color: whitesmoke
+}
+
+.todosCursos {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  flex-direction: row;
+  text-align: center;
 }
 
 .info-curso-main {
@@ -74,6 +101,7 @@ body {
   align-items: center;
   padding: 20px;
   float: right;
+  justify-content: center;
 }
 
 .rodape{
