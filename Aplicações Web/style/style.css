@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   box-sizing: border-box;
 }
@@ -19,7 +20,7 @@ main {
 }
 
 .imagem_logo {
- width: 100px;
+  width: 100px;
 }
 
 .cabecalho_menu {
@@ -54,6 +55,12 @@ a {
   font-size: 25px;
 }
 
+.pagina-principal-texto{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .imagem-principal {
   width: 300px;
   border-radius: 100px;
@@ -73,11 +80,12 @@ a {
   text-align-last: auto;
   gap: 10px;
 }
-.imagens-cursos{
+
+.imagens-cursos {
   width: 100px;
 }
 
-.cursos-main{
+.cursos-main {
   font-size: 15px;
   margin: auto;
   width: 80%;
@@ -104,7 +112,7 @@ a {
   justify-content: center;
 }
 
-.rodape{
+.rodape {
   color: #000000;
   background-color: #41EEF9;
   padding: 24px;
