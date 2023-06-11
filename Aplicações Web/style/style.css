@@ -67,7 +67,6 @@ a {
 
 .pagina-principal-dois h1 {
   font-size: 40px;
-  align-self: center;
   padding-bottom: 10px;
 }
 
@@ -103,8 +102,7 @@ a {
   padding-left: 5%;
   padding-top: 2%;
   align-items: baseline;
-  text-align-last: auto;
-  gap: 10px;
+  gap: 15px;
 }
 
 .imagens-cursos {
