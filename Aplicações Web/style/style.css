@@ -17,6 +17,7 @@ main {
   font-size: 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .imagem_logo {
@@ -26,7 +27,7 @@ main {
 .cabecalho_menu {
   display: flex;
   flex-direction: row;
-  padding: 1% 10px 1% 50%;
+  padding: 1% 10px 1%;
   padding-block-end: 2px;
   gap: 10px;
   align-items: baseline;
