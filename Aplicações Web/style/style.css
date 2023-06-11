@@ -103,6 +103,7 @@ a {
   padding-top: 2%;
   align-items: baseline;
   gap: 1%;
+  justify-content: flex-start;
 }
 
 .imagens-cursos {
