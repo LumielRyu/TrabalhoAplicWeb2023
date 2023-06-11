@@ -65,10 +65,17 @@ a {
 }
 
 .pagina-principal-dois h1 {
-  font-size: 25px;
+  font-size: 40px;
+  align-self: center;
+  padding-bottom: 10px;
 }
 
 .pagina-principal-dois h2 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.pagina-principal-dois h3 {
   font-size: 18px;
   font-weight: 400;
 }
