@@ -66,6 +66,7 @@ a {
   gap: 20px;
   padding: 5% 15%;
   font-size: 25px;
+  justify-content: center;
 }
 
 .pagina-principal-dois {
