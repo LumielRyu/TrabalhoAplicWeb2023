@@ -1,31 +1,30 @@
-// Seleciona todos os links do menu
-const menuLinks = document.querySelectorAll('nav ul li a');
+var slideIndex = 0;
+showSlide(slideIndex);
 
-// Adiciona um ouvinte de eventos para cada link do menu
-menuLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    // Impede o comportamento padrão do link
-    e.preventDefault();
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
 
-    // Remove a classe 'active' de todos os links do menu
-    menuLinks.forEach(link => {
-      link.classList.remove('active');
-    });
+function showSlide(n) {
+  var slides = document.getElementsByClassName("slide");
+  if (n >= slides.length) {
+    slideIndex = 0;
+  } else if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex].style.display = "block";
 
-    // Adiciona a classe 'active' ao link clicado
-    link.classList.add('active');
+  // Reinicia o temporizador a cada vez que o slide é trocado
+  clearInterval(timer);
+  timer = setInterval(function() {
+    changeSlide(1);
+  }, 5000); // 5 segundos (5000 milissegundos)
+}
 
-    // Seleciona a seção correspondente ao link clicado
-    const target = link.getAttribute('href');
-    const section = document.querySelector(target);
-
-    // Remove a classe 'active' de todas as seções
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-
-    // Adiciona a classe 'active' à seção correspondente ao link clicado
-    section.classList.add('active');
-  });
-});
+// Inicia o temporizador inicial
+var timer = setInterval(function() {
+  changeSlide(1);
+}, 5000); // 5 segundos (5000 milissegundos)

@@ -5,7 +5,7 @@
 
 body {
   box-sizing: border-box;
-  background-color: white;
+  background-color: rgb(206, 197, 197) !important;
 }
 
 main {
@@ -13,7 +13,8 @@ main {
 }
 
 .cabecalho {
-  background-color: #41EEF9;
+  background-color: black !important;
+  color: white;
   padding: 2% 0% 2% 5%;
   font-size: 15px;
   display: flex;
@@ -40,7 +41,7 @@ a {
 }
 
 .inscreva-se {
-  background-color: black;
+  background-color: gray !important;
   color: white;
   font-size: 20px;
   padding: 1% 1% 1% 1%;
@@ -62,6 +63,7 @@ a {
 
 .pagina-principal {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 5% 15%;
@@ -138,11 +140,47 @@ a {
 }
 
 .rodape {
-  color: #000000;
-  background-color: #41EEF9;
+  color: white;
+  background-color: black;
   padding: 24px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 400;
+}
+
+.carousel {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+}
+
+#prevButton,
+#nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#prevButton {
+  left: 0;
+}
+
+#nextButton {
+  right: 0;
 }
