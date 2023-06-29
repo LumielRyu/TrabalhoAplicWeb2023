@@ -5,7 +5,7 @@
 
 body {
   box-sizing: border-box;
-  background-color: rgb(206, 197, 197) !important;
+  background-color: white !important;
 }
 
 main {
@@ -29,11 +29,10 @@ main {
 .cabecalho_menu {
   display: flex;
   flex-direction: row;
-  padding: 1% 10px 1%;
+  padding: 10px 10px 1%;
   padding-block-end: 2px;
-  gap: 10px;
+  gap: 20px;
   align-items: baseline;
-  text-align: justify;
 }
 
 a {
@@ -43,12 +42,17 @@ a {
 .inscreva-se {
   background-color: gray !important;
   color: white;
-  font-size: 20px;
+  border-radius: 20%;
+  font-size: 25px;
   padding: 1% 1% 1% 1%;
   display: flex;
   height: auto;
   width: auto;
   text-align: center;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
 }
 
 .abaAtual {
@@ -67,6 +71,16 @@ a {
   align-items: center;
   gap: 20px;
   padding: 5% 15%;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.pagina-principal-index {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 5% 2%;
   font-size: 25px;
   justify-content: center;
 }
@@ -139,6 +153,43 @@ a {
   justify-content: center;
 }
 
+.div-comentarios {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: end;
+}
+
+#comentarios-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#comentarios {
+  padding: 10px;
+}
+
+.comentario {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid black !important;
+  border-radius: 5px;
+}
+
+.comentario .nome {
+  font-weight: bold;
+}
+
+.comentario .texto {
+  margin-top: 5px;
+}
+
 .rodape {
   color: white;
   background-color: black;
@@ -150,7 +201,7 @@ a {
 }
 
 .carousel {
-  width: 500px;
+  width: 60%;
   margin: 0 auto;
   position: relative;
 }
@@ -207,4 +258,31 @@ a {
 
 .curso-card a:hover {
   color: #ff0000;
+}
+
+.rating-container {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.rating-container input[type="radio"] {
+  display: none;
+}
+
+.rating-container label {
+  color: gray;
+  cursor: pointer;
+}
+
+.rating-container label:hover,
+.rating-container label:hover ~ label,
+.rating-container input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+.votes-container {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
 }

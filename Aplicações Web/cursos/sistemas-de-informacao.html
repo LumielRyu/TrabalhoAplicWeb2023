@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catálogo de Dados</title>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img class="imagem_logo" src="../imagens/Logo 02.png" />
+      <nav class="cabecalho_menu">
+        <a title="Home" href="../index.html">Home</a>
+        <a title="Cursos" href="../cursos.html">Cursos</a>
+        <a title="Faculdade" href="../faculdade.html">Faculdade</a>
+        <a title="Contato" href="../contato.html">Contato</a>
+        <a title="sobre Nós" href="../sobre-nos.html">Sobre Nós</a>
+        <a title="Home" href="../painel/painel-login.html" class="inscreva-se"
+          >Inscreva-se</a
+        >
+      </nav>
+    </header>
+    <main>
+      <div class="abaAtual">
+        <a href="../index.html">Home</a>
+        <a> > </a>
+        <a href="../cursos.html">Cursos</a>
+        <a> > </a>
+        <a>Sistemas de Informação</a>
+      </div>
+
+      <div class="pagina-principal-dois">
+        <h1>Sistemas de Informação</h1>
+        <h3>
+          O Curso de Sistemas de Informação tem por objetivo formar um bacharel
+          capaz de compreender, desenvolver, utilizar e adaptar tecnologias da
+          informação, atuando de maneira ética, social e humana. Ele irá
+          assegurar às organizações as informações e os sistemas necessários
+          para prover suporte às operações e obter vantagem competitiva. Estará
+          ainda apto a inovar, planejar e gerenciar a infraestrutura de
+          tecnologia da informação em organizações, bem como desenvolver e
+          evoluir sistemas de informação para uso em processos organizacionais,
+          departamentais e/ou individuais.
+        </h3>
+        <h2>O que voce irá estudar</h2>
+        <h3>
+          O curso contempla conteúdos como programação de computadores, análise
+          e projeto de sistemas, engenharia de software, sistemas de informação
+          e aspectos organizacionais das empresas. Aborda as aplicações dos
+          Sistemas de Informação como bancos de dados e recuperação de
+          informação, gerência de projetos, segurança, avaliação e auditoria de
+          sistemas, governança de tecnologia, abstração, representação e
+          organização da informação. Na área de infraestrutura, sistemas
+          operacionais, projeto e gerência de redes de computadores, comércio
+          eletrônico e desenvolvimento distribuído e em nuvem. No campo
+          gerencial, o papel de liderança da gerência da informação em
+          organizações, a dinâmica do processo de administração e decisório,
+          empreendedorismo e inovação.
+        </h3>
+        <h2>Áreas de atuação</h2>
+        <h3>
+          O bacharel em Sistemas de Informação está capacitado para atuar no
+          mercado em todas as fases de desenvolvimento de sistemas e como gestor
+          dos recursos computacionais. São exemplos de cargos exercidos:
+          analista de sistemas, gerente de projetos de sistemas de informação,
+          analista de suporte, gerente de tecnologia da informação,
+          administrador de banco de dados, administrador de redes, analista de
+          segurança, arquiteto de software, engenheiro de software. Pode atuar
+          ainda em pesquisas na área da Computação, tais como: banco de dados
+          e-business intelligence, engenharia de software, computação móvel e
+          distribuída, gestão de conteúdos, informática na educação,
+          inteligência artificial, jogos digitais, sistemas de informação
+          geográficos, software livre, usabilidade e acessibilidade de
+          softwares, gestão de tecnologia da informação e inovação em TI.
+        </h3>
+
+        <div class="rating-container">
+          <p>Voce Recomendaria este Curso?</p>
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5">&#9734;<span>5</span></label>
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4">&#9734;<span>4</span></label>
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3">&#9734;<span>3</span></label>
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2">&#9734;<span>2</span></label>
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1">&#9734;<span>1</span></label>
+          <input type="radio" id="star0" name="rating" value="0" />
+          <label for="star0">&#9734;<span>0</span></label>
+        </div>
+      
+        <div class="votes-container">
+          <p>Quantidade de votos:</p>
+          <ul id="votes-list"></ul>
+        </div>
+
+        <h1>Comentários</h1>
+
+      <div id="comentarios-container">
+        <div id="comentarios"></div>
+      </div>
+
+      <button onclick="adicionarComentario()">Adicionar Comentário</button>
+
+      </div>
+    </main>
+    <footer class="rodape">
+      <p>Desenvolvido pelo Grupo SOS Facu</p>
+    </footer>
+    <script src="../js/votos-cursos.js"></script>
+    <script src="../js/comentarios.js"></script>
+  </body>
+</html>

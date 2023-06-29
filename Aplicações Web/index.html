@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Catálogo de Dados</title>
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
-  <body>
-    <header class="cabecalho">
-      <img class="imagem_logo" src="./imagens/Logo 02.png" />
-      <nav class="cabecalho_menu">
-        <a title="Home" href="./index.html">Home</a>
-        <a title="Cursos" href="./cursos.html">Cursos</a>
-        <a title="Faculdade" href="./faculdade.html">Faculdade</a>
-        <a title="Contato" href="./contato.html">Contato</a>
-        <a title="sobre Nós"href="./sobre-nos.html">Sobre Nós</a>
-        <a title="Home" href="./painel/painel-login.html" class="inscreva-se">Inscreva-se</a>
-      </nav>
-    </header>
-    <main>
-      <div class="pagina-principal">
-        <div class="carousel">
-          <button id="prevButton" onclick="changeSlide(-1)">&lt;</button>
-          <div class="slide-container">
-            <a href="./cursos/administração.html"><img class="slide" src="./imagens/logo-admin.png"></a>
-            <a href="./cursos/sistema-de-informacao.html"><img class="slide" src="./imagens/logo-si.png"></a>
-            <a href="./cursos/biomed.html"><img class="slide" src="./imagens/logo-biomed.png" ></a>
-          </div>
-          <button id="nextButton" onclick="changeSlide(1)">&gt;</button>
-        </div>
-        <a>
-          Seja bem-vindo ao SOS Facu, o seu guia abrangente para ajudá-lo a descobrir o curso de ensino superior perfeito para você. Inicie sua jornada de exploração no mundo dos cursos acadêmicos e dê o primeiro passo em direção ao seu futuro educacional!
-        </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Catálogo de Dados</title>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img class="imagem_logo" src="./imagens/Logo 02.png" />
+    <nav class="cabecalho_menu">
+      <a title="Home" href="./index.html">Home</a>
+      <a title="Cursos" href="./cursos.html">Cursos</a>
+      <a title="Faculdade" href="./faculdade.html">Faculdade</a>
+      <a title="Contato" href="./contato.html">Contato</a>
+      <a title="sobre Nós" href="./sobre-nos.html">Sobre Nós</a>
+      <a title="Entrar" href="./painel/painel-login.html" class="inscreva-se">Entrar</a>
+    </nav>
+  </header>
+  <main>
+    <div class="carousel">
+      <button id="prevButton" onclick="changeSlide(-1)">&lt;</button>
+      <div class="slide-container">
+        <a href="./cursos/sistemas-de-informacao.html"><img class="slide" src="./imagens/Banner TI.jpg"></a>
       </div>
-      </div>
-    </main>
-    <footer class="rodape">
-      <p>Desenvolvido pelo Grupo SOS Facu</p>
-    </footer>
-    <script src="./js/main.js"></script>
-  </body>
+      <button id="nextButton" onclick="changeSlide(1)">&gt;</button>
+    </div>
+
+    <div class="pagina-principal">
+
+      <p1>
+        Seja bem-vindo ao SOS Facu, o seu guia abrangente para ajudá-lo a descobrir o curso de ensino superior perfeito
+        para você. Inicie sua jornada de exploração no mundo dos cursos acadêmicos e dê o primeiro passo em direção ao
+        seu futuro educacional!
+      </p1>
+
+    </div>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>Desenvolvido pelo Grupo SOS Facu</p>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/carossel.js"></script>
+</body>
+
 </html>
