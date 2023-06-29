@@ -6,9 +6,12 @@
 body {
   box-sizing: border-box;
   background-color: white !important;
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 main {
+
   align-items: center;
 }
 
@@ -191,6 +194,10 @@ a {
 }
 
 .rodape {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   color: white;
   background-color: black;
   padding: 24px;
