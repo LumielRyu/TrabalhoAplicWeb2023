@@ -11,7 +11,7 @@ body {
 }
 
 main {
-
+  font-family: "Montserrat", sans-serif;
   align-items: center;
 }
 
@@ -43,19 +43,19 @@ a {
 }
 
 .inscreva-se {
-  background-color: gray !important;
-  color: white;
-  border-radius: 20%;
+  background-color: white !important;
+  color: black;
+  border-radius: 10%;
   font-size: 25px;
-  padding: 1% 1% 1% 1%;
+  padding: 5% 2% 5% 2%;
   display: flex;
   height: auto;
   width: auto;
   text-align: center;
-  -webkit-border-radius: 20%;
-  -moz-border-radius: 20%;
-  -ms-border-radius: 20%;
-  -o-border-radius: 20%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
 }
 
 .abaAtual {
@@ -75,16 +75,6 @@ a {
   gap: 20px;
   padding: 5% 15%;
   font-size: 20px;
-  justify-content: center;
-}
-
-.pagina-principal-index {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  padding: 5% 2%;
-  font-size: 25px;
   justify-content: center;
 }
 
@@ -110,13 +100,14 @@ a {
   font-weight: 400;
 }
 
-.pagina-principal-texto{
+.pagina-principal-texto {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .imagem-principal {
+  padding-top: 2%;
   width: 300px;
   border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -136,7 +127,7 @@ a {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke
+  background-color: whitesmoke;
 }
 
 .todosCursos {
@@ -162,7 +153,55 @@ a {
   justify-content: end;
 }
 
-#comentarios-container {
+#comentarios-container-admin {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-biomed {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-direito {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-enfermagem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-fisioterapia {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-medicina {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-psicologia {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-sistemas {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#comentarios-container-veterinaria {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 20px;
@@ -202,13 +241,13 @@ a {
   background-color: black;
   padding: 24px;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
 }
 
 .carousel {
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
   position: relative;
 }
@@ -245,6 +284,19 @@ a {
 
 .pagina-principal-dois {
   text-align: center;
+}
+
+.curso-card-main {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.curso-card-main h3 {
+  font-size: 18px;
+  padding-top: 10px;
 }
 
 .curso-card {

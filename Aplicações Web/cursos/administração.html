@@ -14,7 +14,9 @@
         <a title="Faculdade" href="../faculdade.html">Faculdade</a>
         <a title="Contato" href="../contato.html">Contato</a>
         <a title="sobre Nós" href="../sobre-nos.html">Sobre Nós</a>
-        <a title="Home" href="../painel/painel-login.html" class="inscreva-se">Inscreva-se</a>
+        <a title="Entrar" href="../painel/painel-login.html" class="inscreva-se"
+          ><b>Entrar</b></a
+        >
       </nav>
     </header>
     <main>
@@ -28,37 +30,122 @@
 
       <div class="pagina-principal-dois">
         <h1>Administração</h1>
-        
-        <h3>No Curso de Administração da PUC Minas, você se prepara para resolver problemas
-organizacionais com capacidade técnica, gerenciando recursos, processos e informações e
-coordenando equipes multidisciplinares, para a adequada gestão dos negócios e
-desenvolvimento das organizações. Destacam-se no curso palestras, empresa júnior e
-laboratório de mercado de capitais; empresa simulada; estágio curricular supervisionado e
-trabalho de conclusão de curso; projetos de pesquisa e projetos de extensão.</h3>
-        
+
+        <h3>
+          No Curso de Administração da PUC Minas, você se prepara para resolver
+          problemas organizacionais com capacidade técnica, gerenciando
+          recursos, processos e informações e coordenando equipes
+          multidisciplinares, para a adequada gestão dos negócios e
+          desenvolvimento das organizações. Destacam-se no curso palestras,
+          empresa júnior e laboratório de mercado de capitais; empresa simulada;
+          estágio curricular supervisionado e trabalho de conclusão de curso;
+          projetos de pesquisa e projetos de extensão.
+        </h3>
+
         <h2>O que voce irá estudar</h2>
-        
-        <h3>Formação profissional: Teorias da Administração e das Organizações, Gestão de
-Processos, Gestão de Pessoas, Mercado e Marketing, Materiais, Produção e Logística,
-Gestão Financeira e Orçamentária, Sistemas de Informação, Planejamento Estratégico,
-Estudos Quantitativos de Pesquisa Operacional, Matemática e Estatística. Formação
-básica: Ciências Sociais, Filosofia, Cultura Religiosa, Psicologia, Ética e Negócios,
-Economia, Contabilidade e Direito. Estudos de caráter transversal e interdisciplinar e temas
-emergentes da administração.</h3>
-        
+
+        <h3>
+          Formação profissional: Teorias da Administração e das Organizações,
+          Gestão de Processos, Gestão de Pessoas, Mercado e Marketing,
+          Materiais, Produção e Logística, Gestão Financeira e Orçamentária,
+          Sistemas de Informação, Planejamento Estratégico, Estudos
+          Quantitativos de Pesquisa Operacional, Matemática e Estatística.
+          Formação básica: Ciências Sociais, Filosofia, Cultura Religiosa,
+          Psicologia, Ética e Negócios, Economia, Contabilidade e Direito.
+          Estudos de caráter transversal e interdisciplinar e temas emergentes
+          da administração.
+        </h3>
+
         <h2>Áreas de atuação</h2>
-        
-        <h3>O bacharel em Administração encontra oportunidades de inserção em empresas de
-pequeno, médio e grande porte; em empresas privadas de capital nacional e multinacional
-(indústrias, instituições financeiras, comércio varejista, empresas de consultoria,
-associações, organizações de comércio exterior, ONGs, outras organizações); e pode ainda
-constituir e gerenciar o próprio negócio.</h3>
-        
+
+        <h3>
+          O bacharel em Administração encontra oportunidades de inserção em
+          empresas de pequeno, médio e grande porte; em empresas privadas de
+          capital nacional e multinacional (indústrias, instituições
+          financeiras, comércio varejista, empresas de consultoria, associações,
+          organizações de comércio exterior, ONGs, outras organizações); e pode
+          ainda constituir e gerenciar o próprio negócio.
+        </h3>
+
+        <div class="rating-container">
+          <p>Voce Recomendaria este Curso?</p>
+          <input type="radio" id="admin-star5" name="admin-rating" value="5" />
+          <label for="admin-star5">&#9734;<span>5</span></label>
+          <input type="radio" id="admin-star4" name="admin-rating" value="4" />
+          <label for="admin-star4">&#9734;<span>4</span></label>
+          <input type="radio" id="admin-star3" name="admin-rating" value="3" />
+          <label for="admin-star3">&#9734;<span>3</span></label>
+          <input type="radio" id="admin-star2" name="admin-rating" value="2" />
+          <label for="admin-star2">&#9734;<span>2</span></label>
+          <input type="radio" id="admin-star1" name="admin-rating" value="1" />
+          <label for="admin-star1">&#9734;<span>1</span></label>
+          <input type="radio" id="admin-star0" name="admin-rating" value="0" />
+          <label for="admin-star0">&#9734;<span>0</span></label>
+        </div>
+
+        <div class="votes-container">
+          <p>Quantidade de votos para Administração:</p>
+          <ul id="admin-votes-list"></ul>
+        </div>
+
+        <h1>Comentários</h1>
+
+        <div id="comentarios-container-admin">
+          <div id="comentarios-admin"></div>
+        </div>
+
+        <button onclick="adicionarComentarioAdmin()">
+          Adicionar Comentário
+        </button>
       </div>
     </main>
     <footer class="rodape">
       <p>Desenvolvido pelo Grupo SOS Facu</p>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../js/votos-cursos.js"></script>
+    <script>
+      function adicionarComentarioAdmin() {
+        var nome = prompt("Digite seu nome:");
+        var comentario = prompt("Digite seu comentário:");
+
+        if (nome && comentario) {
+          var comentarioCompleto = nome + ": " + comentario;
+          var comentariosAntigos = localStorage.getItem("comentarios-admin");
+
+          if (comentariosAntigos) {
+            comentariosAntigos = JSON.parse(comentariosAntigos);
+          } else {
+            comentariosAntigos = [];
+          }
+
+          comentariosAntigos.push(comentarioCompleto);
+          localStorage.setItem(
+            "comentarios-admin",
+            JSON.stringify(comentariosAntigos)
+          );
+
+          mostrarComentariosAdmin();
+        }
+      }
+
+      function mostrarComentariosAdmin() {
+        var comentariosDiv = document.getElementById("comentarios-admin");
+        comentariosDiv.innerHTML = "";
+
+        var comentariosAntigos = localStorage.getItem("comentarios-admin");
+
+        if (comentariosAntigos) {
+          comentariosAntigos = JSON.parse(comentariosAntigos);
+
+          comentariosAntigos.forEach(function (comentario) {
+            var comentarioElemento = document.createElement("p");
+            comentarioElemento.textContent = comentario;
+            comentariosDiv.appendChild(comentarioElemento);
+          });
+        }
+      }
+
+      mostrarComentariosAdmin();
+    </script>
   </body>
 </html>

@@ -14,7 +14,9 @@
         <a title="Faculdade" href="../faculdade.html">Faculdade</a>
         <a title="Contato" href="../contato.html">Contato</a>
         <a title="sobre Nós" href="../sobre-nos.html">Sobre Nós</a>
-        <a title="Home" href="../painel/painel-login.html" class="inscreva-se">Inscreva-se</a>
+        <a title="Entrar" href="../painel/painel-login.html" class="inscreva-se"
+          ><b>Entrar</b></a
+        >
       </nav>
     </header>
     <main>
@@ -28,39 +30,128 @@
 
       <div class="pagina-principal-dois">
         <h1>Veterinária</h1>
-        <h3>O curso busca formar um bacharel em Medicina Veterinária generalista, crítico e capaz de
-            atuar na promoção da saúde e na produção animal, em benefício da sociedade. A formação
-            humanista do aluno se integra aos conhecimentos nas áreas de clínica e cirurgia, saúde
-            pública, saneamento e sustentabilidade ambiental, inspeção e tecnologia de produtos de
-            origem animal e a produção animal. O projeto pedagógico associa ensino, pesquisa e
-            extensão utilizando os centros veterinários e as fazendas experimentais, em Betim e em
-            Poços de Caldas, além de várias visitas técnicas em indústrias, em outras fazendas e em
-            comunidades, em que as atividades práticas de iniciação científica e extensão são
-            desenvolvidas.</h3>
+        <h3>
+          O curso busca formar um bacharel em Medicina Veterinária generalista,
+          crítico e capaz de atuar na promoção da saúde e na produção animal, em
+          benefício da sociedade. A formação humanista do aluno se integra aos
+          conhecimentos nas áreas de clínica e cirurgia, saúde pública,
+          saneamento e sustentabilidade ambiental, inspeção e tecnologia de
+          produtos de origem animal e a produção animal. O projeto pedagógico
+          associa ensino, pesquisa e extensão utilizando os centros veterinários
+          e as fazendas experimentais, em Betim e em Poços de Caldas, além de
+          várias visitas técnicas em indústrias, em outras fazendas e em
+          comunidades, em que as atividades práticas de iniciação científica e
+          extensão são desenvolvidas.
+        </h3>
 
         <h2>O que voce irá estudar</h2>
 
-        <h3>As disciplinas de fundamentação estão organizadas de forma integrada às disciplinas
-            específicas da Medicina Veterinária nas áreas de clínica e cirurgia, medicina veterinária
-            preventiva, saúde pública, inspeção e tecnologia de produtos de origem animal e produção
-            animal. O percurso acadêmico de formação do profissional médico veterinário é permeado
-            de conhecimentos das Ciências Gerenciais, Humanas e Sociais, com o objetivo de
-            desenvolver as habilidades de gerenciamento, análise e reflexão necessárias à inserção na
-            sociedade em que vai atuar.</h3>
+        <h3>
+          As disciplinas de fundamentação estão organizadas de forma integrada
+          às disciplinas específicas da Medicina Veterinária nas áreas de
+          clínica e cirurgia, medicina veterinária preventiva, saúde pública,
+          inspeção e tecnologia de produtos de origem animal e produção animal.
+          O percurso acadêmico de formação do profissional médico veterinário é
+          permeado de conhecimentos das Ciências Gerenciais, Humanas e Sociais,
+          com o objetivo de desenvolver as habilidades de gerenciamento, análise
+          e reflexão necessárias à inserção na sociedade em que vai atuar.
+        </h3>
 
         <h2>Áreas de atuação</h2>
 
-        <h3>Em órgãos públicos, o bacharel em Medicina Veterinária pode atuar principalmente nas
-            áreas de saúde pública, ensino, pesquisa e extensão. Já na iniciativa privada, além do
-            ensino, pode atuar como responsável técnico de indústrias de laticínios e frigoríficos, em
-            clínicas e hospitais veterinários, propriedades rurais, laboratórios e indústria farmacêutica,
-            fábricas de ração, comércio de produtos veterinários, entre outras áreas.</h3>
-       
+        <h3>
+          Em órgãos públicos, o bacharel em Medicina Veterinária pode atuar
+          principalmente nas áreas de saúde pública, ensino, pesquisa e
+          extensão. Já na iniciativa privada, além do ensino, pode atuar como
+          responsável técnico de indústrias de laticínios e frigoríficos, em
+          clínicas e hospitais veterinários, propriedades rurais, laboratórios e
+          indústria farmacêutica, fábricas de ração, comércio de produtos
+          veterinários, entre outras áreas.
+        </h3>
+
+        <div class="rating-container">
+          <p>Voce Recomendaria este Curso?</p>
+          <input type="radio" id="vet-star5" name="vet-rating" value="5" />
+          <label for="vet-star5">&#9734;<span>5</span></label>
+          <input type="radio" id="vet-star4" name="vet-rating" value="4" />
+          <label for="vet-star4">&#9734;<span>4</span></label>
+          <input type="radio" id="vet-star3" name="vet-rating" value="3" />
+          <label for="vet-star3">&#9734;<span>3</span></label>
+          <input type="radio" id="vet-star2" name="vet-rating" value="2" />
+          <label for="vet-star2">&#9734;<span>2</span></label>
+          <input type="radio" id="vet-star1" name="vet-rating" value="1" />
+          <label for="vet-star1">&#9734;<span>1</span></label>
+          <input type="radio" id="vet-star0" name="vet-rating" value="0" />
+          <label for="vet-star0">&#9734;<span>0</span></label>
+        </div>
+
+        <div class="votes-container">
+          <p>Quantidade de votos para Veterinária:</p>
+          <ul id="vet-votes-list"></ul>
+        </div>
+
+        <h1>Comentários</h1>
+
+        <div id="comentarios-container-veterinaria">
+          <div id="comentarios-veterinaria"></div>
+        </div>
+
+        <button onclick="adicionarComentarioVeterinaria()">
+          Adicionar Comentário
+        </button>
       </div>
     </main>
     <footer class="rodape">
       <p>Desenvolvido pelo Grupo SOS Facu</p>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../js/votos-cursos.js"></script>
+    <script>
+      function adicionarComentarioVeterinaria() {
+        var nome = prompt("Digite seu nome:");
+        var comentario = prompt("Digite seu comentário:");
+
+        if (nome && comentario) {
+          var comentarioCompleto = nome + ": " + comentario;
+          var comentariosAntigos = localStorage.getItem(
+            "comentarios-veterinaria"
+          );
+
+          if (comentariosAntigos) {
+            comentariosAntigos = JSON.parse(comentariosAntigos);
+          } else {
+            comentariosAntigos = [];
+          }
+
+          comentariosAntigos.push(comentarioCompleto);
+          localStorage.setItem(
+            "comentarios-veterinaria",
+            JSON.stringify(comentariosAntigos)
+          );
+
+          mostrarComentariosVeterinaria();
+        }
+      }
+
+      function mostrarComentariosVeterinaria() {
+        var comentariosDiv = document.getElementById("comentarios-veterinaria");
+        comentariosDiv.innerHTML = "";
+
+        var comentariosAntigos = localStorage.getItem(
+          "comentarios-veterinaria"
+        );
+
+        if (comentariosAntigos) {
+          comentariosAntigos = JSON.parse(comentariosAntigos);
+
+          comentariosAntigos.forEach(function (comentario) {
+            var comentarioElemento = document.createElement("p");
+            comentarioElemento.textContent = comentario;
+            comentariosDiv.appendChild(comentarioElemento);
+          });
+        }
+      }
+
+      mostrarComentariosVeterinaria();
+    </script>
   </body>
 </html>

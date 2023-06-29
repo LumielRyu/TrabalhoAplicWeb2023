@@ -14,8 +14,8 @@
         <a title="Faculdade" href="../faculdade.html">Faculdade</a>
         <a title="Contato" href="../contato.html">Contato</a>
         <a title="sobre Nós" href="../sobre-nos.html">Sobre Nós</a>
-        <a title="Home" href="../painel/painel-login.html" class="inscreva-se"
-          >Inscreva-se</a
+        <a title="Entrar" href="../painel/painel-login.html" class="inscreva-se"
+          ><b>Entrar</b></a
         >
       </nav>
     </header>
@@ -75,39 +75,83 @@
 
         <div class="rating-container">
           <p>Voce Recomendaria este Curso?</p>
-          <input type="radio" id="star5" name="rating" value="5" />
-          <label for="star5">&#9734;<span>5</span></label>
-          <input type="radio" id="star4" name="rating" value="4" />
-          <label for="star4">&#9734;<span>4</span></label>
-          <input type="radio" id="star3" name="rating" value="3" />
-          <label for="star3">&#9734;<span>3</span></label>
-          <input type="radio" id="star2" name="rating" value="2" />
-          <label for="star2">&#9734;<span>2</span></label>
-          <input type="radio" id="star1" name="rating" value="1" />
-          <label for="star1">&#9734;<span>1</span></label>
-          <input type="radio" id="star0" name="rating" value="0" />
-          <label for="star0">&#9734;<span>0</span></label>
+          <input type="radio" id="si-star5" name="si-rating" value="5" />
+          <label for="si-star5">&#9734;<span>5</span></label>
+          <input type="radio" id="si-star4" name="si-rating" value="4" />
+          <label for="si-star4">&#9734;<span>4</span></label>
+          <input type="radio" id="si-star3" name="si-rating" value="3" />
+          <label for="si-star3">&#9734;<span>3</span></label>
+          <input type="radio" id="si-star2" name="si-rating" value="2" />
+          <label for="si-star2">&#9734;<span>2</span></label>
+          <input type="radio" id="si-star1" name="si-rating" value="1" />
+          <label for="si-star1">&#9734;<span>1</span></label>
+          <input type="radio" id="si-star0" name="si-rating" value="0" />
+          <label for="si-star0">&#9734;<span>0</span></label>
         </div>
-      
+
         <div class="votes-container">
-          <p>Quantidade de votos:</p>
-          <ul id="votes-list"></ul>
+          <p>Quantidade de votos para Sistemas de Informação:</p>
+          <ul id="si-votes-list"></ul>
         </div>
 
         <h1>Comentários</h1>
 
-      <div id="comentarios-container">
-        <div id="comentarios"></div>
-      </div>
+        <div id="comentarios-container-sistemas">
+          <div id="comentarios-sistemas"></div>
+        </div>
 
-      <button onclick="adicionarComentario()">Adicionar Comentário</button>
-
+        <button onclick="adicionarComentarioSistemas()">
+          Adicionar Comentário
+        </button>
       </div>
     </main>
     <footer class="rodape">
       <p>Desenvolvido pelo Grupo SOS Facu</p>
     </footer>
     <script src="../js/votos-cursos.js"></script>
-    <script src="../js/comentarios.js"></script>
+    <script>
+      function adicionarComentarioSistemas() {
+        var nome = prompt("Digite seu nome:");
+        var comentario = prompt("Digite seu comentário:");
+
+        if (nome && comentario) {
+          var comentarioCompleto = nome + ": " + comentario;
+          var comentariosAntigos = localStorage.getItem("comentarios-sistemas");
+
+          if (comentariosAntigos) {
+            comentariosAntigos = JSON.parse(comentariosAntigos);
+          } else {
+            comentariosAntigos = [];
+          }
+
+          comentariosAntigos.push(comentarioCompleto);
+          localStorage.setItem(
+            "comentarios-sistemas",
+            JSON.stringify(comentariosAntigos)
+          );
+
+          mostrarComentariosSistemas();
+        }
+      }
+
+      function mostrarComentariosSistemas() {
+        var comentariosDiv = document.getElementById("comentarios-sistemas");
+        comentariosDiv.innerHTML = "";
+
+        var comentariosAntigos = localStorage.getItem("comentarios-sistemas");
+
+        if (comentariosAntigos) {
+          comentariosAntigos = JSON.parse(comentariosAntigos);
+
+          comentariosAntigos.forEach(function (comentario) {
+            var comentarioElemento = document.createElement("p");
+            comentarioElemento.textContent = comentario;
+            comentariosDiv.appendChild(comentarioElemento);
+          });
+        }
+      }
+
+      mostrarComentariosSistemas();
+    </script>
   </body>
 </html>

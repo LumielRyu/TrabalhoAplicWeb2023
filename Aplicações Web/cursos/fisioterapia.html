@@ -14,7 +14,9 @@
         <a title="Faculdade" href="../faculdade.html">Faculdade</a>
         <a title="Contato" href="../contato.html">Contato</a>
         <a title="sobre Nós" href="../sobre-nos.html">Sobre Nós</a>
-        <a title="Home" href="../painel/painel-login.html" class="inscreva-se">Inscreva-se</a>
+        <a title="Entrar" href="../painel/painel-login.html" class="inscreva-se"
+          ><b>Entrar</b></a
+        >
       </nav>
     </header>
     <main>
@@ -28,39 +30,132 @@
 
       <div class="pagina-principal-dois">
         <h1>Fisioterapia</h1>
-        <h3>O Curso de Fisioterapia da PUC Minas, foi ofertado primeiramente em Belo Horizonte,
-            sendo posteriormente implantado em Betim e Poços de Caldas. O curso busca desenvolver
-            no aluno habilidades técnico-científicas que permitam uma prática clínica fundamentada na
-            ciência, associada a valores éticos que garantem a humanização do atendimento. O
-            fisioterapeuta é um profissional da área de saúde, dedicado à promoção da saúde,
-            prevenção de agravos e restauração e manutenção da funcionalidade humana, que utiliza a
-            aplicação de princípios científicos para identificar, avaliar, corrigir ou aliviar deficiências
-            orgânicas e alterações do movimento agudas ou prolongadas, temporárias ou definitivas.
-            Além de atuar na prática clínica, o bacharel em Fisioterapia formado na PUC Minas também
-            estará preparado para desenvolver pesquisas em diversas áreas do conhecimento.</h3>
+        <h3>
+          O Curso de Fisioterapia da PUC Minas, foi ofertado primeiramente em
+          Belo Horizonte, sendo posteriormente implantado em Betim e Poços de
+          Caldas. O curso busca desenvolver no aluno habilidades
+          técnico-científicas que permitam uma prática clínica fundamentada na
+          ciência, associada a valores éticos que garantem a humanização do
+          atendimento. O fisioterapeuta é um profissional da área de saúde,
+          dedicado à promoção da saúde, prevenção de agravos e restauração e
+          manutenção da funcionalidade humana, que utiliza a aplicação de
+          princípios científicos para identificar, avaliar, corrigir ou aliviar
+          deficiências orgânicas e alterações do movimento agudas ou
+          prolongadas, temporárias ou definitivas. Além de atuar na prática
+          clínica, o bacharel em Fisioterapia formado na PUC Minas também estará
+          preparado para desenvolver pesquisas em diversas áreas do
+          conhecimento.
+        </h3>
 
         <h2>O que voce irá estudar</h2>
 
-        <h3>O processo de saúde – doença – incapacidade dos indivíduos e das populações. Avaliação,
-            prescrição e execução de tratamentos fisioterapêuticos para pacientes com disfunções
-            respiratórias, ortopédicas, neurológicas (do adulto e da criança), cardiovasculares,
-            ginecológicas, urológicas e dermatológicas. Recursos terapêuticos físicos e manuais.
-            Conceitos básicos de ergonomia para atuação dentro das empresas. Promoção, prevenção
-            e educação em saúde. Indicação e técnicas de confecção de diferentes tipos de órteses e
-            próteses. Metodologia de trabalhos científicos. Prática clínica em centros de saúde,
-            ambulatórios, centros de reabilitação e hospitais. No curso em Poços de Caldas, há as
-            disciplinas de Oncologia e Termalismo e a oferta de estágio extracurricular em Pilates. </h3>
+        <h3>
+          O processo de saúde – doença – incapacidade dos indivíduos e das
+          populações. Avaliação, prescrição e execução de tratamentos
+          fisioterapêuticos para pacientes com disfunções respiratórias,
+          ortopédicas, neurológicas (do adulto e da criança), cardiovasculares,
+          ginecológicas, urológicas e dermatológicas. Recursos terapêuticos
+          físicos e manuais. Conceitos básicos de ergonomia para atuação dentro
+          das empresas. Promoção, prevenção e educação em saúde. Indicação e
+          técnicas de confecção de diferentes tipos de órteses e próteses.
+          Metodologia de trabalhos científicos. Prática clínica em centros de
+          saúde, ambulatórios, centros de reabilitação e hospitais. No curso em
+          Poços de Caldas, há as disciplinas de Oncologia e Termalismo e a
+          oferta de estágio extracurricular em Pilates.
+        </h3>
 
         <h2>Áreas de atuação</h2>
 
-        <h3>Centros de saúde, consultórios, clínicas, ambulatórios e hospitais, além de diversos locais,
-            como empresas e academias.</h3>
+        <h3>
+          Centros de saúde, consultórios, clínicas, ambulatórios e hospitais,
+          além de diversos locais, como empresas e academias.
+        </h3>
 
+        <div class="rating-container">
+          <p>Voce Recomendaria este Curso?</p>
+          <input type="radio" id="fisio-star5" name="fisio-rating" value="5" />
+          <label for="fisio-star5">&#9734;<span>5</span></label>
+          <input type="radio" id="fisio-star4" name="fisio-rating" value="4" />
+          <label for="fisio-star4">&#9734;<span>4</span></label>
+          <input type="radio" id="fisio-star3" name="fisio-rating" value="3" />
+          <label for="fisio-star3">&#9734;<span>3</span></label>
+          <input type="radio" id="fisio-star2" name="fisio-rating" value="2" />
+          <label for="fisio-star2">&#9734;<span>2</span></label>
+          <input type="radio" id="fisio-star1" name="fisio-rating" value="1" />
+          <label for="fisio-star1">&#9734;<span>1</span></label>
+          <input type="radio" id="fisio-star0" name="fisio-rating" value="0" />
+          <label for="fisio-star0">&#9734;<span>0</span></label>
+        </div>
+
+        <div class="votes-container">
+          <p>Quantidade de votos para Fisioterapia:</p>
+          <ul id="fisio-votes-list"></ul>
+        </div>
+
+        <h1>Comentários</h1>
+
+        <div id="comentarios-container-fisioterapia">
+          <div id="comentarios-fisioterapia"></div>
+        </div>
+
+        <button onclick="adicionarComentarioFisioterapia()">
+          Adicionar Comentário
+        </button>
       </div>
     </main>
     <footer class="rodape">
       <p>Desenvolvido pelo Grupo SOS Facu</p>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../js/votos-cursos.js"></script>
+    <script>
+      function adicionarComentarioFisioterapia() {
+        var nome = prompt("Digite seu nome:");
+        var comentario = prompt("Digite seu comentário:");
+
+        if (nome && comentario) {
+          var comentarioCompleto = nome + ": " + comentario;
+          var comentariosAntigos = localStorage.getItem(
+            "comentarios-fisioterapia"
+          );
+
+          if (comentariosAntigos) {
+            comentariosAntigos = JSON.parse(comentariosAntigos);
+          } else {
+            comentariosAntigos = [];
+          }
+
+          comentariosAntigos.push(comentarioCompleto);
+          localStorage.setItem(
+            "comentarios-fisioterapia",
+            JSON.stringify(comentariosAntigos)
+          );
+
+          mostrarComentariosFisioterapia();
+        }
+      }
+
+      function mostrarComentariosFisioterapia() {
+        var comentariosDiv = document.getElementById(
+          "comentarios-fisioterapia"
+        );
+        comentariosDiv.innerHTML = "";
+
+        var comentariosAntigos = localStorage.getItem(
+          "comentarios-fisioterapia"
+        );
+
+        if (comentariosAntigos) {
+          comentariosAntigos = JSON.parse(comentariosAntigos);
+
+          comentariosAntigos.forEach(function (comentario) {
+            var comentarioElemento = document.createElement("p");
+            comentarioElemento.textContent = comentario;
+            comentariosDiv.appendChild(comentarioElemento);
+          });
+        }
+      }
+
+      mostrarComentariosFisioterapia();
+    </script>
   </body>
 </html>
