@@ -7,6 +7,12 @@ body {
     color: #023047
 }
 
+.logo-inicial {
+    width: 150px;
+    align-self: center;
+    padding: 0 50px 5px 50px;
+}
+
 .page {
     display: flex;
     flex-direction: column;
