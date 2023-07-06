@@ -18,7 +18,7 @@ main {
 .cabecalho {
   background-color: black !important;
   color: white;
-  padding: 2% 0% 2% 5%;
+  padding: 2% 2% 2% 5%;
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@ a {
   color: black;
   border-radius: 10%;
   font-size: 25px;
-  padding: 5% 2% 5% 2%;
+  padding: 2% 2% 2% 2%;
   display: flex;
   height: auto;
   width: auto;

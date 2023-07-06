@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function logout() {
-  window.location.href = '../painel/painel-login.html';
+  window.location.href = './painel-login.html';
 }

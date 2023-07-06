@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             emailElement.textContent = user.email;
   
             // Redirecionar para a página do painel de usuário
-            window.location.href = '../painel/painel-usuario.html';
+            window.location.href = './principal.html';
           } else {
             alert('Senha incorreta. Por favor, tente novamente.');
           }

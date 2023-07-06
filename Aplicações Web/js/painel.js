@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (foundUser && foundUser.password === passwordInput.value) {
-          window.location.href = '../painel/painel-usuario.html';
+          window.location.href = './principal.html';
         } else {
           alert('E-mail ou senha incorretos!');
         }

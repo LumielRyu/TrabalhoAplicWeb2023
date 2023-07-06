@@ -1,72 +1,148 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <title>Cursos</title>
+
   <head>
     <meta charset="UTF-8" />
     <title>Catálogo de Dados</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/style-teste.css" />
   </head>
-  <body>
-    <header class="cabecalho">
-      <img class="imagem_logo" src="./imagens/Logo 02.png" />
-      <nav class="cabecalho_menu">
-        <a title="Home" href="./index.html">Home</a>
-        <a title="Cursos" href="./cursos.html">Cursos</a>
-        <a title="Faculdade" href="./faculdade.html">Faculdade</a>
-        <a title="Contato" href="./contato.html">Contato</a>
-        <a title="sobre Nós" href="./sobre-nos.html">Sobre Nós</a>
-        <a title="Entrar" href="./painel/painel-login.html" class="inscreva-se"
-          ><b>Entrar</b></a
-        >
-      </nav>
-    </header>
-    <main>
-      <div class="abaAtual">
-        <a href="./index.html">Home</a>
-        <a> > </a>
-        <a>Cursos</a>
-      </div>
 
-      <div class="pagina-principal-dois">
-        <h1>Cursos oferecidos pelas universidades parceiras do SOS facu</h1>
-        <div>
-          <div class="curso-card-main">
-            <h3>PUC-MG Unidade Betim</h3>
-            <div class="curso-card">
-              <a href="./cursos/sistemas-de-informacao.html"
-                >Sistemas de Informação</a
-              >
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/direito.html">Direito</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/medicina.html">Medicina</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/administração.html">Administração</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/biomedicina.html">Biomedicina</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/psicologia.html">Psicologia</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/veterinaria.html">Veterinária</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/fisioterapia.html">Fisioterapia</a>
-            </div>
-            <div class="curso-card">
-              <a href="./cursos/enfermagem.html">Enfermagem</a>
-            </div>
-          </div>
+<body>
+  <header class="cabecalho">
+    <img class="imagem_logo" src="./imagens/Logo 02.png" />
+    <nav class="cabecalho_menu">
+      <a title="Home" href="./principal.html">Home</a>
+      <a title="Cursos" href="./cursos.html">Cursos</a>
+      <a title="Faculdade" href="./faculdade.html">Faculdade</a>
+      <a title="Contato" href="./contato.html">Contato</a>
+      <a title="sobre Nós" href="./sobre-nos.html">Sobre Nós</a>
+      <a title="Entrar" href="./cursos-criacao.html" class="inscreva-se"><B>Painel</B></a>
+      <a title="Entrar" href="./index.html" class="inscreva-se"><B>Sair</B></a>
+    </nav>
+  </header>
+  <main>
+    <div class="abaAtual">
+      <a href="./principal.html">Home</a>
+      <a> > </a>
+      <a>Cursos</a>
+    </div>
+    <div class="pagina-principal-dois">
+      <div class="pagina-principal-cursos">
+
+        <div class="pagina-principal-cursos-lista">
+          <h1>Cursos</h1>
+
+          <div id="courses-list"></div>
+        </div>
+
+
+        <hr />
+
+        <div id="course-details">
+          <h2>Detalhes do Curso</h2>
+          <div id="course-info"></div>
+          <button id="edit-btn" style="display: none" onclick="editCourse()">
+            Editar
+          </button>
         </div>
       </div>
-    </main>
-    <footer class="rodape">
-      <p>Desenvolvido pelo Grupo SOS Facu</p>
-    </footer>
-    <script src="./js/main.js"></script>
-  </body>
+
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>Desenvolvido pelo Grupo SOS Facu</p>
+  </footer>
+
+  <script>
+    var courses = [];
+    var selectedCourseIndex = -1;
+
+    function createCourse() {
+      var courseName = document.getElementById("course-name").value;
+      var courseInfo = document.getElementById("course-informacao").value;
+      var courseStudy = document.getElementById("course-study").value;
+      var courseAreas = document.getElementById("course-areas").value;
+
+      var course = {
+        name: courseName,
+        info: courseInfo,
+        study: courseStudy,
+        areas: courseAreas
+      };
+
+      courses.push(course);
+      displayCourses();
+      saveCoursesToLocalStorage();
+      updateCourseDetails(course);
+    }
+
+    function deleteCourse() {
+      if (selectedCourseIndex >= 0) {
+        courses.splice(selectedCourseIndex, 1);
+        selectedCourseIndex = -1;
+        displayCourses();
+        clearCourseDetails();
+        saveCoursesToLocalStorage();
+      }
+    }
+
+    function displayCourses() {
+      var coursesList = document.getElementById("courses-list");
+      coursesList.innerHTML = "";
+      for (var i = 0; i < courses.length; i++) {
+        var course = courses[i]; var courseItem = document.createElement("div");
+        courseItem.className = "course-info"; courseItem.textContent = course.name; courseItem.addEventListener("click",
+          selectCourse.bind(null, i)); coursesList.appendChild(courseItem);
+      }
+    } function selectCourse(index) {
+      selectedCourseIndex = index; var courseDetails = document.getElementById("course-info"); var course = courses[index];
+      courseDetails.innerHTML = "<strong>Nome:</strong> " + course.name + "<br>"
+        + "<strong>Informação do Curso:</strong> " + course.info + "<br>" + "<strong>O que você irá estudar:</strong> " +
+        course.study + "<br>" + "<strong>Áreas de atuação:</strong> " + course.areas + "<br>";
+      document.getElementById("edit-btn").style.display = "inline";
+    } function clearCourseDetails() {
+      var
+        courseDetails = document.getElementById("course-info"); courseDetails.textContent = "";
+      document.getElementById("edit-btn").style.display = "none";
+    } function editCourse() {
+      var updatedName = prompt("Digite o nome atualizado do curso:");
+      var updatedInfo = prompt("Digite a informação atualizada do curso:");
+      var updatedStudy = prompt("Digite o que você irá estudar atualizado:");
+      var updatedAreas = prompt("Digite as áreas de atuação atualizadas:");
+
+      if (updatedName !== null && updatedName.trim() !== "") {
+        var course = courses[selectedCourseIndex];
+        course.name = updatedName;
+        course.info = updatedInfo;
+        course.study = updatedStudy;
+        course.areas = updatedAreas;
+
+        updateCourseDetails(course);
+        displayCourses();
+        saveCoursesToLocalStorage();
+      }
+    } function updateCourseDetails(course) {
+      var courseDetails = document.getElementById("course-info");
+      courseDetails.innerHTML = "<strong>Nome:</strong> " + course.name + "<br>" +
+        "<strong>Informação do Curso:</strong> " + course.info + "<br>" +
+        "<strong>O que você irá estudar:</strong> " + course.study + "<br>" +
+        "<strong>Áreas de atuação:</strong> " + course.areas + "<br>";
+    }
+
+    function saveCoursesToLocalStorage() { localStorage.setItem("courses", JSON.stringify(courses)); }
+
+    function loadCoursesFromLocalStorage() {
+      var
+        storedCourses = localStorage.getItem("courses"); if (storedCourses !== null) {
+          courses = JSON.parse(storedCourses);
+          displayCourses();
+        }
+    } // Carrega os cursos salvos no LocalStorage ao iniciar a página
+    loadCoursesFromLocalStorage(); </script>
+</body>
+
 </html>

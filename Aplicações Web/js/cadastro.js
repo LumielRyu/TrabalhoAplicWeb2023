@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Exibir alerta de conta criada com sucesso
       alert('Conta criada com sucesso! Faça o login para acessar.');
 
-      window.location.href = '../painel/painel-login.html';
+      window.location.href = './index.html';
     });
   }
 });
